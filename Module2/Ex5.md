@@ -121,10 +121,11 @@ plot(tempv,rmv,type="l",ylim=c(0,1))
 points(data=data, Malfunction/Count ~ Temperature)
 ```
 
-![](Ex5_files/figure-gfm/unnamed-chunk-5-1.png)<!-- --> It looks like
-the probability stays at 0.2 but as concluded previously, this
-prediction doesn’t really make sense. I think that another problem was
-not only the lack of data but the arrogance and not taking the
+![](Ex5_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+It looks like the probability stays at 0.2 but as concluded previously,
+this prediction doesn’t really make sense. I think that another problem
+was not only the lack of data but the arrogance and not taking the
 responsibility for not having enough data. Anyway, this is how the
 prediction should have looked like:
 
@@ -141,12 +142,16 @@ points(Malfunction / Count ~ Temperature, data = data)
 abline(v = 31, col = "red", lty = 2)
 ```
 
-![](Ex5_files/figure-gfm/unnamed-chunk-6-1.png)<!-- --> PS: when
-knitting, the graph is As we can see with the all data set included, the
-chances of malfunction are higher at lower temperatures. The red-line
-represents the expected 31F temperature. We can see that the probability
-is pretty high, therefore the logic of the previous graph is no longer
-valid.
+![](Ex5_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+PS: when knitting, the graph is not correctly drawn (loading data set
+conflicts maybe) I will attach a screenshot of it separately. PPS: to
+work, run the whole dataset again and then the graph, there is noise
+kept from previous things. As we can see with the all data set included,
+the chances of malfunction are higher at lower temperatures. The
+red-line represents the expected 31F temperature. We can see that the
+probability is pretty high, therefore the logic of the previous graph is
+no longer valid.
 
 Last conclusion: the dataset didn’t even include the 31F temperature,
 the lowest they had was 53F with 2 malfunctions, resulting in an
